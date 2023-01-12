@@ -1,0 +1,81 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+    font-family: digital7;
+    src: url("../font/digital-7-mono.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../font/Roboto-Medium.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar-brand {
+    font-family: Roboto;
+}
+
+#app {
+    height: 100%;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none;
+         user-select: none; /* Standard syntax */
+}
+#container {
+    height: calc(100vh - 52px);
+}
+
+#timer {
+    font-family: digital7;
+}
+
+/* smartphone*/
+@media (max-width: 480px) {
+    #timer {
+        font-size: 64px;
+    }
+}
+/* tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #timer {
+        font-size: 80px;
+    }
+}
+/* laptop */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #timer {
+        font-size: 88px;
+    }
+}
+/* Desktop  */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    #timer {
+        font-size: 96px;
+    }
+}
+/* tv */
+@media screen and (min-width: 1201px) {
+    #timer {
+        font-size: 112px;
+    }
+}
