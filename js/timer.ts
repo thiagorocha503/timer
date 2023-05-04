@@ -21,7 +21,6 @@ class Timer {
         this.display = display;
         this.picker = picker;
         this.sound = sound;
-        console.log("init");
     }
 
     get control() {

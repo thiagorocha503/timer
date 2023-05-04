@@ -23,7 +23,6 @@ class Control {
         this._start.style.display = "block";
 
         this._start.onclick = () => {
-            console.log("play");
             this.timer?.play();
         };
         this._pause.onclick = () => {
