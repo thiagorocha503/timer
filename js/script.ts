@@ -15,12 +15,14 @@ window.addEventListener("load", () => {
         document.getElementById("picker-minutes") as HTMLInputElement,
         document.getElementById("picker-seconds") as HTMLInputElement
     );
-    const display = new Display(
-        document.getElementById("timer") as HTMLParagraphElement
+    const circularProgress = new CircularProgress(
+        document.getElementById("circle") as HTMLElement,
+        document.getElementById("circle-value") as HTMLElement
+      
     );
     const sound = new Sound(
         document.getElementById("wecker") as HTMLAudioElement
     );
-    const timer = new Timer(control, display, picker, sound);
+    const timer = new Timer(control, circularProgress, picker, sound);
     control.setTimer(timer)
 });

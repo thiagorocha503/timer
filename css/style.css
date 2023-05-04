@@ -1,24 +1,12 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 
-@font-face {
-    font-family: digital7;
-    src: url("../font/digital-7-mono.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-@font-face {
-    font-family: Roboto;
-    src: url("../font/Roboto-Medium.ttf");
-}
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
@@ -39,43 +27,41 @@ body {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     -moz-user-select: none;
-         user-select: none; /* Standard syntax */
+    user-select: none; /* Standard syntax */
 }
 #container {
     height: calc(100vh - 52px);
 }
 
-#timer {
-    font-family: digital7;
+#circle,
+#circle-inner,
+#circle-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* smartphone*/
-@media (max-width: 480px) {
-    #timer {
-        font-size: 64px;
-    }
+#circle,
+#circle-inner {
+    border-radius: 50%;
 }
-/* tablets */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    #timer {
-        font-size: 80px;
-    }
+
+#circle {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: conic-gradient(#0d6efd 300deg, grey 0deg);
 }
-/* laptop */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    #timer {
-        font-size: 88px;
-    }
+#circle-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 85%;
+    width: 85%;
+    background-color: white;
 }
-/* Desktop  */
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-    #timer {
-        font-size: 96px;
-    }
-}
-/* tv */
-@media screen and (min-width: 1201px) {
-    #timer {
-        font-size: 112px;
-    }
+#circle-value {
+    font-family:  "Lato", sans-serif;
+    font-size: 1.8rem;
 }
